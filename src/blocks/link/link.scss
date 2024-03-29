@@ -1,0 +1,11 @@
+.link {
+  @extend %link-element;
+
+  &:hover {
+    opacity: $opacity;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

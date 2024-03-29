@@ -1,0 +1,62 @@
+.header {
+  min-height: 88px;
+
+  @media screen and (min-width: $screen-xl) {
+    min-height: 0;
+  }
+
+  &__contrainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    margin: 0 16px;
+
+    @media screen and (min-width: $screen-md) {
+      margin: 0 24px;
+    }
+
+    @media screen and (min-width: $screen-xl) {
+      display: none;
+    }
+  }
+
+  &__navigate {
+    display: flex;
+
+    @media screen and (min-width: $screen-md) {
+      margin-left: auto;
+    }
+  }
+
+  &__navigate-visibility {
+    display: none;
+
+    @media screen and (min-width: $screen-md) {
+      display: flex;
+    }
+  }
+
+  &__line {
+    border-right: 2px solid #eaeaea;
+    height: 32px;
+    width: 2px;
+
+    &--logo--indent {
+      display: none;
+
+      @media screen and (min-width: $screen-md) {
+        display: block;
+        margin-right: 20px;
+      }
+    }
+
+    &--navigate--indent {
+      margin-right: 20px;
+
+      @media screen and (min-width: $screen-md) {
+        margin-left: 20px;
+      }
+    }
+  }
+}
