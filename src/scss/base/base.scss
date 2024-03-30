@@ -10,14 +10,16 @@ html {
 body {
   margin: 0 auto;
   font-family: $font-tt;
-  background-color: $color-white;
   font-size: $text-middle;
 }
 
 .wrapper {
   min-width: $screen-sm;
-  max-width: $screen-xl;
+  max-width: $screen-xxl;
   margin: 0 auto;
   position: relative;
-}
 
+  @media screen and (min-width: $screen-xxl) {
+    display: flex;
+  }
+}

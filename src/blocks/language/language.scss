@@ -1,0 +1,27 @@
+.language {
+  margin: 0;
+  margin-left: 24px;
+  padding: 0;
+  display: flex;
+  list-style: none;
+
+  &__item {
+    margin-right: 7px;
+  }
+
+  &__switch {
+    display: block;
+    line-height: $Line-height-middle;
+    text-decoration: none;
+    color: $text-dark;
+    transition: $transition;
+
+    &:hover {
+      opacity: $opacity;
+    }
+
+    &:active {
+      color: $text-grey;
+    }
+  }
+}

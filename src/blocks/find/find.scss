@@ -1,3 +1,12 @@
 .find {
-  background-image: '../img/search.svg';
+  background-image: url('../img/search.svg');
+
+  &--indent {
+    margin-top: 23px;
+    margin-right: 0;
+
+    @media screen and (min-width: $screen-xxl) {
+      margin-top: 35px;
+    }
+  }
 }

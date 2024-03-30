@@ -1,0 +1,115 @@
+.sidebar {
+  width: 320px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: $color-white-cristal;
+  box-shadow: 16px 0 52px 0 #0e185033, -2px 0 4px 0 #454f7e05;
+
+  @media screen and (min-width: $screen-xxl) {
+    box-shadow: none;
+    position: static;
+    max-width: 276px;
+  }
+
+  &__header {
+    display: flex;
+    margin: 0 24px;
+
+    @media screen and (min-width: $screen-xxl) {
+      margin: 0;
+    }
+  }
+
+  &__services-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    list-style: none;
+    margin: 50px auto auto 24px;
+    padding: 0;
+
+    @media screen and (min-width: $screen-xxl) {
+      margin-top: 37px;
+    }
+  }
+
+  &__servis-item {
+    margin-bottom: 32px;
+    position: relative;
+
+    @media screen and (min-width: $screen-xxl) {
+      margin-bottom: 26px;
+    }
+
+    &:last-child {
+      @media screen and (min-width: $screen-xxl) {
+        margin-bottom: 236px;
+      }
+    }
+
+    &:hover .sidebar__servis-link::before {
+      content: '';
+      position: absolute;
+      left: -24px;
+      top: -4px;
+      width: 4px;
+      height: 32px;
+      background-image: url(../img/highlight.png);
+      background-size: 4px 30px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__servis-link {
+    text-decoration: none;
+    line-height: $Line-height-middle;
+    letter-spacing: $letter;
+    color: $text-dark;
+    transition: $transition, color 0.7s;
+
+    &:hover {
+      opacity: $opacity;
+      color: $text-grey;
+    }
+  }
+
+  &__communication {
+    margin-left: 24px;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: $screen-xxl) {
+      margin-left: 20px;
+    }
+  }
+
+  &__communication-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  &__communication-item {
+    margin-right: 16px;
+  }
+
+  &__email {
+    margin: 0 0 12px;
+    padding: 0;
+    line-height: $Line-height-middle;
+  }
+
+  &__phone {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+    letter-spacing: -0.6px;
+    color: $text-dark;
+  }
+}

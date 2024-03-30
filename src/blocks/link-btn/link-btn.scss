@@ -1,0 +1,31 @@
+.link-btn {
+  border: none;
+  padding: 0;
+  background: inherit;
+  line-height: $Line-height-middle;
+  letter-spacing: $letter;
+  transition: $transition;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    background-image: url('../img/icon.svg');
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 10px;
+  }
+
+  &:hover {
+    opacity: $opacity;
+  }
+
+  &--revert::before {
+    transform: rotate(180deg);
+  }
+
+  &--indent {
+    margin: 0;
+  }
+}
