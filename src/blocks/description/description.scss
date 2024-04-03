@@ -1,4 +1,12 @@
 .description {
+  @media screen and (min-width: $screen-md) {
+    margin-bottom: 32px;
+  }
+
+  @media screen and (min-width: $screen-xxl) {
+    margin-bottom: 51px;
+  }
+
   &__title-container {
     display: flex;
     margin: 24px 16px 24px 0;
@@ -115,8 +123,8 @@
 
     @media screen and (min-width: $screen-md) {
       flex-direction: row;
-      justify-content: space-around;
-      margin: 32px 24px;
+      justify-content: space-between;
+      margin: 32px 24px 0;
       align-items: flex-start;
       min-height: 208px;
     }
@@ -134,7 +142,7 @@
     margin: 24px 16px 16px;
     font-size: $text-small;
     line-height: $Line-height-small;
-    letter-spacing: 0.2px;
+    letter-spacing: $letter-up;
 
     @media screen and (min-width: $screen-md) {
       line-height: 20px;
@@ -182,7 +190,6 @@
   &__img {
     width: 100%;
     height: auto;
-    margin-bottom: 13px;
 
     @media screen and (min-width: $screen-md) {
       max-width: 360px;

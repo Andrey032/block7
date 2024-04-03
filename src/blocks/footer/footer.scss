@@ -1,0 +1,65 @@
+.footer {
+  &__container {
+    @media screen and(min-width: $screen-md) {
+      display: flex;
+      margin: 0 24px;
+      justify-content: space-between;
+    }
+
+    @media screen and(min-width: $screen-xl) {
+      min-width: 1120px;
+      margin: 0;
+    }
+  }
+  &__text {
+    text-align: center;
+    font-size: $text-small;
+    line-height: $Line-height-less-than-average;
+    color: $text-grey;
+
+    @media screen and (min-width: $screen-md) {
+      display: block;
+      &--position--left {
+        text-align: left;
+        min-width: 218px;
+      }
+
+      &--position--right {
+        text-align: right;
+        max-width: 213px;
+      }
+    }
+
+    @media screen and (min-width: $screen-xl) {
+      &--position--left {
+        padding-left: 19px;
+        padding-top: 4px;
+      }
+
+      &--position--right {
+        padding-right: 47px;
+        padding-top: 4px;
+        min-width: 330px;
+      }
+    }
+  }
+
+  &__text-link {
+    display: block;
+    text-decoration: none;
+    color: $text-grey;
+    font-size: $text-small;
+    line-height: $Line-height-less-than-average;
+    text-align: center;
+
+    @media screen and (min-width: $screen-md) {
+      display: inline-block;
+      padding-top: 12px;
+      min-width: 214px;
+    }
+
+    @media screen and (min-width: $screen-xl) {
+      padding-top: 17px;
+    }
+  }
+}

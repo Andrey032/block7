@@ -16,14 +16,10 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="header__contrainer">
+        <div class="header__container">
           <button class="header-button burger"></button>
           <div class="header__line--logo--indent"></div>
-          <img
-            class="logo"
-            src="./img/Group.svg"
-            alt="логотип компании CPS"
-          />
+          <img class="logo" src="./img/Group.svg" alt="логотип компании CPS" />
           <nav class="header__navigate">
             <div class="header__navigate-visibility">
               <a href="#" class="link call" target="_blank"></a>
@@ -39,13 +35,13 @@
       <div class="overlay">
         <aside class="sidebar">
           <div class="sidebar__header">
-            <button class="header-button close close--indent"></button>
+            <button class="header-button close header-button--indent--close"></button>
             <img
               class="logo logo--indent"
               src="../img/Group.svg"
               alt="логотип компании CPS"
             />
-            <button class="header-button find find--indent"></button>
+            <button class="header-button find header-button--indent--find"></button>
           </div>
           <ul class="sidebar__services-list">
             <li class="sidebar__servis-item">
@@ -147,7 +143,9 @@
           <div class="description__info">
             <div>
               <p class="description__text">
-                Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                Мы являемся авторизованным сервисным центром по ремонту техники
+                Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+                официальной гарантией производителя.
               </p>
               <a class="description__link" href="#">Читать далее</a>
             </div>
@@ -159,8 +157,8 @@
           </div>
         </section>
         <section class="brand">
+          <h2 class="title">Ремонт техники различных брендов</h2>
           <div class="brand__container swiper">
-            <h2 class="brand__title">Ремонт техники различных брендов</h2>
             <ul class="brand__list swiper-wrapper">
               <li class="brand__item swiper-slide">
                 <a class="brand__link lenovo" href="#" target="_blank"></a>
@@ -196,13 +194,156 @@
                 <a class="brand__link apple" href="#" target="_blank"></a>
               </li>
             </ul>
-            <button class="link-btn link-btn--indent show hidden" href="#">
+            <button class="link-btn link-btn--indent" href="#">
               Показать все
             </button>
             <div class="swiper-pagination"></div>
           </div>
         </section>
+        <section class="services">
+          <h2 class="title">Ремонт различных видов техники</h2>
+          <div class="services__container swiper">
+            <ul class="services__list swiper-wrapper">
+              <li class="services__item swiper-slide"
+                ><a href="#" class="services__link" target="_blank"
+                  >Ремонт ноутбуков</a
+                ></li
+              >
+              <li class="services__item swiper-slide"
+                ><a href="#" class="services__link" target="_blank"
+                  >Ремонт планшетов</a
+                ></li
+              >
+              <li class="services__item swiper-slide"
+                ><a href="#" class="services__link" target="_blank"
+                  >Ремонт ПК</a
+                ></li
+              >
+              <li class="services__item swiper-slide"
+                ><a href="#" class="services__link" target="_blank"
+                  >Ремонт мониторов
+                </a></li
+              >
+              <li class="services__item swiper-slide"
+                ><a href="#" class="services__link" target="_blank"
+                  >Ремонт ноутбуков</a
+                ></li
+              >
+              <li class="services__item swiper-slide"
+                ><a href="#" class="services__link" target="_blank"
+                  >Ремонт планшетов</a
+                ></li
+              >
+              <li class="services__item swiper-slide"
+                ><a href="#" class="services__link" target="_blank"
+                  >Ремонт ПК</a
+                ></li
+              >
+              <li class="services__item swiper-slide"
+                ><a href="#" class="services__link" target="_blank"
+                  >Ремонт мониторов
+                </a></li
+              >
+            </ul>
+            <button class="link-btn link-btn--indent" href="#">
+              Показать все
+            </button>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+        <section class="price">
+          <h2 class="title">Цены на услуги</h2>
+          <div class="price__container swiper">
+            <ul class="price___list swiper-wrapper">
+              <li class="price__item swiper-slide">
+                <h3 class="price__title price__title--title-service"
+                  >Ремонтные услуги</h3
+                >
+                <p class="price__text price__text--service">Диагностика</p>
+                <h3 class="price__title price__title--title-price">Цена</h3>
+                <p class="price__text price__text--price">Бесплатно</p>
+                <h3 class="price__title price__title--title-term">Срок</h3>
+                <p class="price__text price__text--term">30-120 мин</p>
+                <button class="price__btn">заказать</button>
+              </li>
+              <li class="price__item swiper-slide">
+                <h3 class="price__title price__title--title-service"
+                  >Ремонтные услуги</h3
+                >
+                <p class="price__text price__text--service">Замена дисплея</p>
+                <h3 class="price__title price__title--title-price">Цена</h3>
+                <p class="price__text price__text--price">Бесплатно</p>
+                <h3 class="price__title price__title--title-term">Срок</h3>
+                <p class="price__text price__text--term">30 мин</p>
+                <button class="price__btn">заказать</button>
+              </li>
+              <li class="price__item swiper-slide">
+                <h3 class="price__title price__title--title-service"
+                  >Ремонтные услуги</h3
+                >
+                <p class="price__text price__text--service"
+                  >Замена полифонического динамика</p
+                >
+                <h3 class="price__title price__title--title-price">Цена</h3>
+                <p class="price__text price__text--price">1 000 ₽</p>
+                <h3 class="price__title price__title--title-term">Срок</h3>
+                <p class="price__text price__text--term">30-120 мин</p>
+                <button class="price__btn">заказать</button>
+              </li>
+              <li class="price__item swiper-slide">
+                <h3 class="price__title price__title--title-service"
+                  >Ремонтные услуги</h3
+                >
+                <p class="price__text price__text--service"
+                  >Тестирование с выдачей технического заключения</p
+                >
+                <h3 class="price__title price__title--title-price">Цена</h3>
+                <p class="price__text price__text--price">1 000 ₽</p>
+                <h3 class="price__title price__title--title-term">Срок</h3>
+                <p class="price__text price__text--term">30-120 мин</p>
+                <button class="price__btn">заказать</button>
+              </li>
+              <li class="price__item swiper-slide">
+                <h3 class="price__title price__title--title-service"
+                  >Ремонтные услуги</h3
+                >
+                <p class="price__text price__text--service"
+                  >Замена программного обеспечения</p
+                >
+                <h3 class="price__title price__title--title-price">Цена</h3>
+                <p class="price__text price__text--price">1 000 ₽</p>
+                <h3 class="price__title price__title--title-term">Срок</h3>
+                <p class="price__text price__text--term">30-120 мин</p>
+                <button class="price__btn">заказать</button>
+              </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+          </div>
+          <p class="price__description"
+            >Все цены указаны с учетом НДС. Стоимость ремонта указана на
+            единичную услугу. Для получения коммерческого предложения на
+            постоянное обслуживание, оставьте заявку.</p
+          >
+          <a href="#" class="price__link" target="_blank"
+            >Получить коммерческое предложение</a
+          >
+        </section>
       </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <p class="footer__text footer__text--position--left"
+            >© 2019 CPS<br />
+            Разработано командой Apesong
+          </p>
+          <a href="#" class="footer__text-link" target="_blank"
+            >Политика конфиденциальности</a
+          >
+          <p class="footer__text footer__text--position--right"
+            >Информация, размещенная на данной странице, не является публичной
+            офертой</p
+          >
+        </div>
+      </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>

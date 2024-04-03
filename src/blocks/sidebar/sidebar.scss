@@ -1,5 +1,6 @@
 .sidebar {
-  width: 320px;
+  width: 100%;
+  max-width: 360px;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -7,6 +8,10 @@
   z-index: 10;
   background-color: $color-white-cristal;
   box-shadow: 16px 0 52px 0 #0e185033, -2px 0 4px 0 #454f7e05;
+
+  @media screen and (min-width: $screen-md) {
+    max-width: 320px;
+  }
 
   @media screen and (min-width: $screen-xxl) {
     box-shadow: none;

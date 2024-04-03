@@ -1,0 +1,86 @@
+.logo {
+  margin-right: auto;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    opacity: $opacity;
+  }
+
+  &--indent {
+    margin-top: 19px;
+
+    @media screen and (min-width: $screen-xxl) {
+      margin: 30px 116px 0 22px;
+    }
+  }
+}
+
+.close {
+  background-image: url('./../img/close.svg');
+}
+
+.find {
+  background-image: url('./../img/search.svg');
+}
+
+.acer {
+  background-image: url('./../img/Acer.png'), $img;
+}
+
+.lenovo {
+  background-image: url('./../img/Lenovo.png'), $img;
+}
+
+.samsung {
+  background-image: url('./../img/Samsung.png'), $img;
+}
+
+.apple {
+  background-image: url('./../img/Apple.png'), $img;
+}
+
+.vs {
+  background-image: url('./../img/VS.png'), $img;
+}
+
+.bosch {
+  background-image: url('./../img/Bosch.png'), $img;
+}
+
+.hp {
+  background-image: url('./../img/HP.png'), $img;
+}
+
+.sony {
+  background-image: url('./../img/Sony.png'), $img;
+}
+
+
+
+.burger {
+  background-image: url('./../img/burger.svg');
+}
+
+.call {
+  background-image: url('./../img/call.svg');
+}
+
+.repair {
+  background-image: url('./../img/repair.svg');
+}
+
+.checkstatus {
+  background-image: url('./../img/checkstatus.svg');
+}
+
+.chat {
+  background-image: url('./../img/chat.svg');
+}
+
+.profile {
+  background-image: url('./../img/profile.svg');
+}
+
+
+

@@ -6,7 +6,9 @@ $screen-xl: 1120px;
 $screen-xxl: 1440px;
 
 $letter: -0.2px;
+$letter-up: 0.2px;
 
+$Line-height-less-than-average: 16px;
 $Line-height-small: 18px;
 $Line-height-middle: 24px;
 $Line-height-large: 40px;
@@ -20,7 +22,8 @@ $text-large: 28px;
 
 $color-pink: #ff3e79;
 $color-white: #f8f8f8;
-$color-white-cristal: #FFFFFF;
+$color-white-cristal: #ffffff;
+$color-border: #eaeaea;
 
 $transition: opacity 0.3s;
 $opacity: 0.7;

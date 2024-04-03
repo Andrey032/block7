@@ -1,28 +1,26 @@
-import '../scss/style.scss'
+import '../scss/style.scss';
 
-const showBtn = document.querySelector('.link-btn');
-const brandContainer = document.querySelector('.brand__container');
-const brandItem = brandContainer.querySelectorAll('.brand__item');
+const showBtn = document.querySelectorAll('.link-btn');
+const brandList = document.querySelector('.brand__list');
+const servicesList = document.querySelector('.services__list');
 
-
-function toggleBtn (item) {
-  showBtn.addEventListener('click', function () {
-    if (item.classList.contains('hidden')) {
-      showBtn.textContent = 'Скрыть';
-      showBtn.classList.add('link-btn--revert');
-      item.classList.remove('hidden');
+function toggleBtn(btn) {
+    if (brandList.classList.contains('show')) {
+      btn.textContent = 'Показать все';
+      btn.classList.remove('link-btn--revert');
+      brandList.classList.remove('show');
     } else {
-      showBtn.textContent = 'Показать все'
-      showBtn.classList.remove('link-btn--revert')
-      item.classList.add('hidden');
+      btn.textContent = 'Скрыть';
+      btn.classList.add('link-btn--revert');
+      brandList.classList.add('show');
     }
-  });
 }
+showBtn.addEventListener('click', function() {
 
-for (let i = 6; i < brandItem.length; i++) {
-  brandItem[i].classList.add('hidden');
-  toggleBtn(brandItem[i]);
-}
+})
+// for (let i = 0; i < showBtn.length; i++) {
+//   toggleBtn(showBtn[i]);
+// }
 
 var init = false;
 var swiper;
@@ -30,15 +28,15 @@ function swiperCard() {
   if (window.innerWidth <= 767) {
     if (!init) {
       init = true;
-      swiper = new Swiper(".swiper", {
-        direction: "horizontal",
-        slidesPerView: "auto",
+      swiper = new Swiper('.swiper', {
+        direction: 'horizontal',
+        slidesPerView: 'auto',
         centeredSlides: true,
         spaceBetween: 32,
         pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
+          el: '.swiper-pagination',
+          clickable: true
+        }
       });
     }
   } else if (init) {
@@ -47,6 +45,6 @@ function swiperCard() {
   }
 }
 swiperCard();
-window.addEventListener("resize", swiperCard);
+window.addEventListener('resize', swiperCard);
 
-console.log('Works!')
+console.log('Works!');

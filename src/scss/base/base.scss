@@ -19,7 +19,15 @@ body {
   margin: 0 auto;
   position: relative;
 
+  @media screen and (min-width: $screen-xl) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   @media screen and (min-width: $screen-xxl) {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 }

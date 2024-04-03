@@ -2,18 +2,12 @@
 @import '../scss/base/variables.scss';
 @import '../scss/base/base.scss';
 @import '../scss/base/templates.scss';
+@import '../scss/base/images.scss';
+@import '../blocks/swiper/swiper.scss';
 
 @import '../blocks/header/header.scss';
 @import '../blocks/header-button/header-button.scss';
-@import '../blocks/burger/burger.scss';
-@import '../blocks/call/call.scss';
-@import '../blocks/repair/repair.scss';
-@import '../blocks/checkstatus/checkstatus.scss';
-@import '../blocks/chat/chat.scss';
-@import '../blocks/profile/profile.scss';
-@import '../blocks/close/close.scss';
-@import '../blocks/find/find.scss';
-@import '../blocks/logo/logo.scss';
+
 @import '../blocks/link/link.scss';
 @import '../blocks/contant/contant.scss';
 @import '../blocks/description/description.scss';
@@ -22,19 +16,10 @@
 @import '../blocks/overlay/overlay.scss';
 @import '../blocks/link-btn/link-btn.scss';
 @import '../blocks/brand/brand.scss';
+@import '../blocks/title/title.scss';
+@import '../blocks/services/services.scss';
+@import '../blocks/price/price.scss';
+@import '../blocks/footer/footer.scss';
+
 @import '../blocks/hidden/hidden.scss';
-@import '../blocks/lenovo/lenovo.scss';
-@import '../blocks/samsung/samsung.scss';
-@import '../blocks/apple/apple.scss';
-@import '../blocks/vs/vs.scss';
-@import '../blocks/bosch/bosch.scss';
-@import '../blocks/hp/hp.scss';
-@import '../blocks/acer/acer.scss';
-@import '../blocks/sony/sony.scss';
-@import '../blocks/swiper-wrapper/swiper-wrapper.scss';
-@import '../blocks/swiper-pagination-bullet/swiper-pagination-bullet.scss';
 @import '../blocks/show/show.scss';
-
-
-
-

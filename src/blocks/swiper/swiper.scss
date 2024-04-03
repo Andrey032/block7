@@ -1,0 +1,16 @@
+.swiper {
+  @media screen and (min-width: $screen-md) {
+    margin: 0 auto;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: var(
+    --swiper-pagination-bullet-width,
+    var(--swiper-pagination-bullet-size, 12px)
+  );
+  height: var(
+    --swiper-pagination-bullet-height,
+    var(--swiper-pagination-bullet-size, 12px)
+  );
+}
