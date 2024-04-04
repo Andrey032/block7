@@ -1,0 +1,17 @@
+.logo {
+  margin-right: auto;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    opacity: $opacity;
+  }
+
+  &--indent {
+    margin-top: 19px;
+
+    @media screen and (min-width: $screen-xxl) {
+      margin: 30px 116px 0 22px;
+    }
+  }
+}
