@@ -1,26 +1,82 @@
 import '../scss/style.scss';
 
-const showBtn = document.querySelectorAll('.link-btn');
-const brandList = document.querySelector('.brand__list');
-const servicesList = document.querySelector('.services__list');
+const wrapper = document.querySelector('.wrapper');
+const brandList = wrapper.querySelector('.brand__list');
+const servicesList = wrapper.querySelector('.services__list');
+const overlay = wrapper.querySelector('.overlay');
+const modalFeedback = wrapper.querySelector('#feedback');
+const modalCall = wrapper.querySelector('#call');
 
-function toggleBtn(btn) {
-    if (brandList.classList.contains('show')) {
-      btn.textContent = 'Показать все';
-      btn.classList.remove('link-btn--revert');
-      brandList.classList.remove('show');
-    } else {
+function toggleBtnBrand(btn) {
+  if (btn.name === 'brand') {
+    brandList.classList.toggle('show-brand');
+    if (brandList.classList.contains('show-brand')) {
       btn.textContent = 'Скрыть';
       btn.classList.add('link-btn--revert');
-      brandList.classList.add('show');
+    } else {
+      btn.textContent = 'Показать все';
+      btn.classList.remove('link-btn--revert');
     }
+  } else {
+    servicesList.classList.toggle('show-services');
+    if (servicesList.classList.contains('show-services')) {
+      btn.textContent = 'Скрыть';
+      btn.classList.add('link-btn--revert');
+    } else {
+      btn.textContent = 'Показать все';
+      btn.classList.remove('link-btn--revert');
+    }
+  }
 }
-showBtn.addEventListener('click', function() {
 
-})
-// for (let i = 0; i < showBtn.length; i++) {
-//   toggleBtn(showBtn[i]);
-// }
+function toggleBtnMenu() {
+  overlay.classList.toggle('show');
+}
+
+function openWindowCall(obj) {
+  if (obj.classList.contains('call')) {
+    modalCall.classList.add('show');
+  }
+  if (obj.classList.contains('chat')) {
+    modalFeedback.classList.add('show');
+  }
+}
+
+function closeWindowCall() {
+  modalCall.classList.remove('show');
+  modalFeedback.classList.remove('show');
+  overlay.classList.remove('show');
+}
+
+document.addEventListener('click', function (evt) {
+  if (evt.target.classList.contains('show') && !evt.target.closest('.modal__container')) {
+    closeWindowCall();
+  }
+  if (
+    evt.target.classList.contains('show') &&
+    !evt.target.closest('.sidebar')
+  ) {
+    closeWindowCall();
+  }
+});
+
+wrapper.addEventListener('click', function (evt) {
+  if (evt.target.closest('.link-btn')) {
+    toggleBtnBrand(evt.target);
+  }
+  if (evt.target.closest('.header-button')) {
+    toggleBtnMenu();
+  }
+  if (evt.target.closest('.call')) {
+    openWindowCall(evt.target);
+  }
+  if (evt.target.closest('.chat')) {
+    openWindowCall(evt.target);
+  }
+  if (evt.target.closest('.close')) {
+    closeWindowCall();
+  }
+});
 
 var init = false;
 var swiper;

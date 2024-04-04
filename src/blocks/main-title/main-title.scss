@@ -1,0 +1,35 @@
+.main-title {
+  font-size: $text-large;
+  line-height: $Line-height-large;
+  letter-spacing: -0.6px;
+  font-weight: 700;
+  margin: 0;
+
+  &::before {
+    content: '';
+    display: inline;
+    background-image: url('../img/highlight.png');
+    padding: 3px 16px 0 0;
+    background-repeat: no-repeat;
+
+    @media screen and (min-width: $screen-md) {
+      padding-right: 24px;
+    }
+
+    @media screen and (min-width: $screen-xl) {
+      padding-right: 32px;
+    }
+  }
+
+  &--restyle {
+    margin-top: 32px;
+    font-size: 24px;
+    line-height: 32px;
+    padding: 8px 0 0;
+
+    @media screen and(min-width: $screen-xxl) {
+      margin-top: 0;
+      padding: 0;
+    }
+  }
+}

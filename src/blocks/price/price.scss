@@ -21,7 +21,7 @@
     }
   }
 
-  &___list {
+  &__list {
     display: flex;
     margin: 0;
     padding: 0;
@@ -116,41 +116,6 @@
 
     &--term {
       grid-area: term;
-    }
-  }
-
-  &__btn {
-    border: none;
-    border-radius: 16px;
-    background-color: $color-pink;
-    width: 119px;
-    height: 32px;
-    color: $color-white-cristal;
-    padding: 0;
-    margin: 0;
-    font-size: 16px;
-    line-height: $Line-height-middle;
-    letter-spacing: -0.15px;
-    padding-left: 12px;
-    text-align: left;
-    position: absolute;
-    bottom: 13px;
-    right: 33px;
-
-    @media screen and (min-width: $screen-md) {
-      position: static;
-      grid-area: button;
-      justify-self: end;
-    }
-
-    &::after {
-      content: '';
-      border: solid $color-white-cristal;
-      border-width: 0 3px 3px 0;
-      margin-left: 17px;
-      display: inline-block;
-      padding: 3px;
-      transform: rotate(-45deg);
     }
   }
 

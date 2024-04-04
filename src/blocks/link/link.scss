@@ -8,4 +8,14 @@
   &:last-child {
     margin-right: 0;
   }
+
+  &--indent {
+    margin-left: 16px;
+
+    @media screen and(min-width: $screen-xxl) {
+      position: absolute;
+      top: -7px;
+      right: 457px;
+    }
+  }
 }

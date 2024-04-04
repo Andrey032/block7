@@ -1,7 +1,19 @@
-.show {
+.show-brand {
   @media screen and (min-width: $screen-md) {
     .brand__item:nth-child(+n + 1) {
       display: block;
     }
   }
+}
+
+.show-services {
+  @media screen and (min-width: $screen-md) {
+    .services__item:nth-child(+n + 1) {
+      display: block;
+    }
+  }
+}
+
+.show {
+  display: block;
 }

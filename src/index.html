@@ -22,26 +22,30 @@
           <img class="logo" src="./img/Group.svg" alt="логотип компании CPS" />
           <nav class="header__navigate">
             <div class="header__navigate-visibility">
-              <a href="#" class="link call" target="_blank"></a>
-              <a href="#" class="link chat" target="_blank"></a>
-              <a href="#" class="link profile" target="_blank"></a>
+              <button class="link call"></button>
+              <button class="link chat"></button>
+              <button class="link profile"></button>
             </div>
             <div class="header__line header__line--navigate--indent"></div>
-            <a href="#" class="link repair" target="_blank"></a>
-            <a href="#" class="link checkstatus" target="_blank"></a>
+            <button class="link repair"></button>
+            <button class="link checkstatus"></button>
           </nav>
         </div>
       </header>
       <div class="overlay">
         <aside class="sidebar">
           <div class="sidebar__header">
-            <button class="header-button close header-button--indent--close"></button>
+            <button
+              class="header-button close header-button--indent--close"
+            ></button>
             <img
               class="logo logo--indent"
               src="../img/Group.svg"
               alt="логотип компании CPS"
             />
-            <button class="header-button find header-button--indent--find"></button>
+            <button
+              class="header-button find header-button--indent--find"
+            ></button>
           </div>
           <ul class="sidebar__services-list">
             <li class="sidebar__servis-item">
@@ -88,13 +92,13 @@
           <div class="sidebar__communication">
             <ul class="sidebar__communication-list">
               <li class="sidebar__communication-item">
-                <a class="link call" href="#" target="_blank"></a>
+                <button class="link call"></button>
               </li>
               <li class="sidebar__communication-item">
-                <a class="link chat" href="#" target="_blank"></a>
+                <button class="link chat"></button>
               </li>
               <li class="sidebar__communication-item">
-                <a class="link profile" href="#" target="_blank"></a>
+                <button class="link profile"></button>
               </li>
             </ul>
             <p class="sidebar__email">mail@cps.com</p>
@@ -116,7 +120,7 @@
       <main class="contant">
         <section class="description">
           <div class="description__title-container">
-            <h1 class="description__title">Услуги и сервисы</h1>
+            <h1 class="main-title">Услуги и сервисы</h1>
             <div class="description__container-service">
               <span class="description__service-text">Оставить заявку</span
               ><a
@@ -194,7 +198,7 @@
                 <a class="brand__link apple" href="#" target="_blank"></a>
               </li>
             </ul>
-            <button class="link-btn link-btn--indent" href="#">
+            <button class="link-btn link-btn--indent" name="brand">
               Показать все
             </button>
             <div class="swiper-pagination"></div>
@@ -245,7 +249,7 @@
                 </a></li
               >
             </ul>
-            <button class="link-btn link-btn--indent" href="#">
+            <button class="link-btn link-btn--indent" name="services">
               Показать все
             </button>
             <div class="swiper-pagination"></div>
@@ -254,7 +258,7 @@
         <section class="price">
           <h2 class="title">Цены на услуги</h2>
           <div class="price__container swiper">
-            <ul class="price___list swiper-wrapper">
+            <ul class="price__list swiper-wrapper">
               <li class="price__item swiper-slide">
                 <h3 class="price__title price__title--title-service"
                   >Ремонтные услуги</h3
@@ -264,7 +268,7 @@
                 <p class="price__text price__text--price">Бесплатно</p>
                 <h3 class="price__title price__title--title-term">Срок</h3>
                 <p class="price__text price__text--term">30-120 мин</p>
-                <button class="price__btn">заказать</button>
+                <button class="btn-submit">заказать</button>
               </li>
               <li class="price__item swiper-slide">
                 <h3 class="price__title price__title--title-service"
@@ -275,7 +279,7 @@
                 <p class="price__text price__text--price">Бесплатно</p>
                 <h3 class="price__title price__title--title-term">Срок</h3>
                 <p class="price__text price__text--term">30 мин</p>
-                <button class="price__btn">заказать</button>
+                <button class="btn-submit">заказать</button>
               </li>
               <li class="price__item swiper-slide">
                 <h3 class="price__title price__title--title-service"
@@ -288,7 +292,7 @@
                 <p class="price__text price__text--price">1 000 ₽</p>
                 <h3 class="price__title price__title--title-term">Срок</h3>
                 <p class="price__text price__text--term">30-120 мин</p>
-                <button class="price__btn">заказать</button>
+                <button class="btn-submit">заказать</button>
               </li>
               <li class="price__item swiper-slide">
                 <h3 class="price__title price__title--title-service"
@@ -301,7 +305,7 @@
                 <p class="price__text price__text--price">1 000 ₽</p>
                 <h3 class="price__title price__title--title-term">Срок</h3>
                 <p class="price__text price__text--term">30-120 мин</p>
-                <button class="price__btn">заказать</button>
+                <button class="btn-submit">заказать</button>
               </li>
               <li class="price__item swiper-slide">
                 <h3 class="price__title price__title--title-service"
@@ -314,7 +318,7 @@
                 <p class="price__text price__text--price">1 000 ₽</p>
                 <h3 class="price__title price__title--title-term">Срок</h3>
                 <p class="price__text price__text--term">30-120 мин</p>
-                <button class="price__btn">заказать</button>
+                <button class="btn-submit">заказать</button>
               </li>
             </ul>
             <div class="swiper-pagination"></div>
@@ -344,6 +348,88 @@
           >
         </div>
       </footer>
+      <div class="modal" id="feedback">
+        <div class="modal__container">
+          <button class="link link--indent close"></button>
+          <h2 class="main-title main-title--restyle">Обратная связь</h2>
+          <form class="form" action="#" method="get">
+            <input
+              class="form__input"
+              type="text"
+              name="userName"
+              required
+              placeholder="Имя"
+            />
+            <input
+              class="form__input"
+              type="tel"
+              name="phone"
+              required
+              pattern=""
+              placeholder="Телефон"
+            />
+            <input
+              class="form__input"
+              type="email"
+              name="userEmail"
+              required
+              pattern=""
+              placeholder="Электронная почта"
+            />
+            <textarea
+              class="form__textarea"
+              name="message"
+              cols="30"
+              rows="5"
+              placeholder="Сообщение"
+            ></textarea>
+          </form>
+          <p class="modal__text"
+            >Нажимая “отправить”, вы даете согласие
+            на
+            <span class="modal__text-conf"
+              >обработку персональных данных</span
+            >
+            и соглашаетесь с нашей
+            <span class="modal__text-conf"
+              >политикой конфиденциальности</span
+            ></p
+          >
+          <button type="submit" class="btn-submit btn-submit--width"
+            >ОТПРАВИТЬ</button
+          >
+        </div>
+      </div>
+      <div class="modal" id="call">
+        <div class="modal__container">
+          <button class="link link--indent close"></button>
+          <h2 class="main-title main-title--restyle">Заказать звонок</h2>
+          <form class="form form--indent" action="#" method="get">
+            <input
+              class="form__input"
+              type="tel"
+              name="phone"
+              required
+              pattern=""
+              placeholder="Телефон"
+            />
+          </form>
+          <p class="modal__text modal__text--indent"
+            >Нажимая “отправить”, вы даете согласие
+            на
+            <span class="modal__text-conf"
+              >обработку персональных данных</span
+            >
+            и соглашаетесь с нашей
+            <span class="modal__text-conf"
+              >политикой конфиденциальности</span
+            ></p
+          >
+          <button type="submit" class="btn-submit btn-submit--width"
+            >ОТПРАВИТЬ</button
+          >
+        </div>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
