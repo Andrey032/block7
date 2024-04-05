@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Webpack 4 Starter</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link href="style.css" rel="stylesheet"></head>
   <body>
     <div class="wrapper">
@@ -26,67 +25,6 @@
           </nav>
         </div>
       </header>
-      <div class="overlay">
-        <aside class="sidebar">
-          <div class="sidebar__header">
-            <button class="header-button close header-button--indent--close"></button>
-            <img class="logo logo--indent" src="./img/Group.svg" alt="логотип компании CPS">
-            <button class="header-button find header-button--indent--find"></button>
-          </div>
-          <ul class="sidebar__services-list">
-            <li class="sidebar__servis-item">
-              <a class="sidebar__servis-link" href="#" target="_blank">Ремонт техники</a>
-            </li>
-            <li class="sidebar__servis-item">
-              <a class="sidebar__servis-link" href="#" target="_blank">Услуги и сервисы</a>
-            </li>
-            <li class="sidebar__servis-item">
-              <a class="sidebar__servis-link" href="#" target="_blank">Корпоративным клиентам</a>
-            </li>
-            <li class="sidebar__servis-item">
-              <a class="sidebar__servis-link" href="#" target="_blank">Продавцам техники</a>
-            </li>
-            <li class="sidebar__servis-item">
-              <a class="sidebar__servis-link" href="#" target="_blank">Партнерам</a>
-            </li>
-            <li class="sidebar__servis-item">
-              <a class="sidebar__servis-link" href="#" target="_blank">Производителям</a>
-            </li>
-            <li class="sidebar__servis-item">
-              <a class="sidebar__servis-link" href="#" target="_blank">Наши сервисные центры</a>
-            </li>
-            <li class="sidebar__servis-item">
-              <a class="sidebar__servis-link" href="#" target="_blank">Контакты</a>
-            </li>
-          </ul>
-          <div class="sidebar__communication">
-            <ul class="sidebar__communication-list">
-              <li class="sidebar__communication-item">
-                <button class="link call"></button>
-              </li>
-              <li class="sidebar__communication-item">
-                <button class="link chat"></button>
-              </li>
-              <li class="sidebar__communication-item">
-                <button class="link profile"></button>
-              </li>
-            </ul>
-            <p class="sidebar__email">mail@cps.com</p>
-            <p class="sidebar__phone">8 800 890 8900</p>
-          </div>
-          <ul class="language">
-            <li class="language__item">
-              <a class="language__switch" href="#">RU</a>
-            </li>
-            <li class="language__item">
-              <a class="language__switch" href="#">EN</a>
-            </li>
-            <li class="language__item">
-              <a class="language__switch" href="#">CH</a>
-            </li>
-          </ul>
-        </aside>
-      </div>
       <main class="contant">
         <section class="description">
           <div class="description__title-container">
@@ -154,7 +92,7 @@
                 <a class="brand__link apple" href="#" target="_blank"></a>
               </li>
             </ul>
-            <button class="link-btn link-btn--indent" name="brand">
+            <button class="link-btn link-btn--indent button-brand">
               Показать все
             </button>
             <div class="swiper-pagination"></div>
@@ -175,7 +113,7 @@
               <li class="services__item swiper-slide"><a href="#" class="services__link" target="_blank">Ремонт мониторов
                 </a></li>
             </ul>
-            <button class="link-btn link-btn--indent" name="services">
+            <button class="link-btn link-btn--indent button-services">
               Показать все
             </button>
             <div class="swiper-pagination"></div>
@@ -249,14 +187,14 @@
             офертой</p>
         </div>
       </footer>
-      <div class="modal" id="feedback">
+      <div class="modal modal-feedback">
         <div class="modal__container">
           <button class="link link--indent close"></button>
           <h2 class="main-title main-title--restyle">Обратная связь</h2>
-          <form class="form" action="#" method="get">
+          <form class="form" id="formFeedback" action="#" method="post">
             <input class="form__input" type="text" name="userName" required placeholder="Имя">
-            <input class="form__input" type="tel" name="phone" required pattern="" placeholder="Телефон">
-            <input class="form__input" type="email" name="userEmail" required pattern="" placeholder="Электронная почта">
+            <input class="form__input" type="tel" name="phone" required pattern="\+?[0-9\s\-\(\)]+" placeholder="Телефон">
+            <input class="form__input" type="email" name="userEmail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Электронная почта">
             <textarea class="form__textarea" name="message" cols="30" rows="5" placeholder="Сообщение"></textarea>
           </form>
           <p class="modal__text">Нажимая “отправить”, вы даете согласие
@@ -264,25 +202,85 @@
             <span class="modal__text-conf">обработку персональных данных</span>
             и соглашаетесь с нашей
             <span class="modal__text-conf">политикой конфиденциальности</span></p>
-          <button type="submit" class="btn-submit btn-submit--width">ОТПРАВИТЬ</button>
+          <input type="submit" form="formFeedback" class="btn-submit btn-submit-feedback btn-submit--width" value="ОТПРАВИТЬ">
         </div>
       </div>
-      <div class="modal" id="call">
+      <div class="modal modal-call">
         <div class="modal__container">
           <button class="link link--indent close"></button>
           <h2 class="main-title main-title--restyle">Заказать звонок</h2>
-          <form class="form form--indent" action="#" method="get">
-            <input class="form__input" type="tel" name="phone" required pattern="" placeholder="Телефон">
+          <form class="form form--indent" id="formCall" action="#" method="post">
+            <input class="form__input" type="tel" name="phone" required pattern="\+?[0-9\s\-\(\)]+" placeholder="Телефон">
           </form>
           <p class="modal__text modal__text--indent">Нажимая “отправить”, вы даете согласие
             на
             <span class="modal__text-conf">обработку персональных данных</span>
             и соглашаетесь с нашей
             <span class="modal__text-conf">политикой конфиденциальности</span></p>
-          <button type="submit" class="btn-submit btn-submit--width">ОТПРАВИТЬ</button>
+          <input type="submit" form="formCall" class="btn-submit btn-submit--width" value="ОТПРАВИТЬ">
         </div>
       </div>
+      <div class="overlay">
+        <aside class="sidebar">
+          <div class="sidebar__header">
+            <button class="header-button close header-button--indent--close"></button>
+            <img class="logo logo--indent" src="./img/Group.svg" alt="логотип компании CPS">
+            <button class="header-button find header-button--indent--find"></button>
+          </div>
+          <ul class="sidebar__services-list">
+            <li class="sidebar__servis-item">
+              <a class="sidebar__servis-link" href="#" target="_blank">Ремонт техники</a>
+            </li>
+            <li class="sidebar__servis-item">
+              <a class="sidebar__servis-link" href="#" target="_blank">Услуги и сервисы</a>
+            </li>
+            <li class="sidebar__servis-item">
+              <a class="sidebar__servis-link" href="#" target="_blank">Корпоративным клиентам</a>
+            </li>
+            <li class="sidebar__servis-item">
+              <a class="sidebar__servis-link" href="#" target="_blank">Продавцам техники</a>
+            </li>
+            <li class="sidebar__servis-item">
+              <a class="sidebar__servis-link" href="#" target="_blank">Партнерам</a>
+            </li>
+            <li class="sidebar__servis-item">
+              <a class="sidebar__servis-link" href="#" target="_blank">Производителям</a>
+            </li>
+            <li class="sidebar__servis-item">
+              <a class="sidebar__servis-link" href="#" target="_blank">Наши сервисные центры</a>
+            </li>
+            <li class="sidebar__servis-item">
+              <a class="sidebar__servis-link" href="#" target="_blank">Контакты</a>
+            </li>
+          </ul>
+          <div class="sidebar__communication">
+            <ul class="sidebar__communication-list">
+              <li class="sidebar__communication-item">
+                <button class="link call"></button>
+              </li>
+              <li class="sidebar__communication-item">
+                <button class="link chat"></button>
+              </li>
+              <li class="sidebar__communication-item">
+                <button class="link profile"></button>
+              </li>
+            </ul>
+            <p class="sidebar__email">mail@cps.com</p>
+            <p class="sidebar__phone">8 800 890 8900</p>
+          </div>
+          <ul class="language">
+            <li class="language__item">
+              <a class="language__switch" href="#">RU</a>
+            </li>
+            <li class="language__item">
+              <a class="language__switch" href="#">EN</a>
+            </li>
+            <li class="language__item">
+              <a class="language__switch" href="#">CH</a>
+            </li>
+          </ul>
+        </aside>
+      </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="./js/bundle.js"></script></body>
 </html>
