@@ -1,0 +1,8 @@
+.contant {
+  max-width: 1120px;
+  margin: 0 auto;
+
+  @media screen and(min-width: $screen-xxl) {
+    margin-right: 16px;
+  }
+}
