@@ -1,9 +1,9 @@
 @import url('../fonts/fonts.scss');
-@import '../scss/base/vendor.scss';
-@import '../scss/base/variables.scss';
-@import '../scss/base/base.scss';
-@import '../scss/base/templates.scss';
-@import '../scss/base/images.scss';
+@import './base/vendor.scss';
+@import './base/variables.scss';
+@import './base/base.scss';
+@import './base/templates.scss';
+@import './base/images.scss';
 @import './blocks/swiper/swiper.scss';
 
 @import './blocks/header/header.scss';

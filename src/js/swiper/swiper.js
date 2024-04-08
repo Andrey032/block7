@@ -4,7 +4,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 let init = false;
 let swiper;
 function swiperCard() {
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 767) {
     if (!init) {
       init = true;
 swiper = new Swiper('.swiper', {
