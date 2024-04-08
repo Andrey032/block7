@@ -1288,7 +1288,7 @@ body {
   .link-btn--revert::before {
     transform: rotate(180deg); }
   .link-btn--indent {
-    margin: 0; }
+    margin-left: 24px; }
 
 .brand__container {
   margin: 16px 0 0;
@@ -1603,10 +1603,17 @@ body {
     display: inline-block;
     padding: 3px;
     transform: rotate(-45deg); }
-  .btn-submit--width {
+  .btn-submit--form {
+    position: absolute;
+    bottom: -50px;
+    right: 0px;
     width: 136px;
-    position: static; }
-    .btn-submit--width::after {
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    text-align: center;
+    padding: 0; }
+    .btn-submit--form::after {
       margin-left: 5px; }
 
 @media screen and (min-width: 768px) {
@@ -1679,6 +1686,7 @@ body {
     z-index: 20;
     min-height: 940px;
     max-width: 320px;
+    width: 100%;
     padding-top: 24px;
     display: flex;
     flex-direction: column;
@@ -1690,7 +1698,8 @@ body {
     .modal__container .form {
       max-width: 288px;
       width: 100%;
-      margin: 24px auto 7px; }
+      margin: 24px auto 7px;
+      position: relative; }
       @media screen and (min-width: 1440px) {
         .modal__container .form {
           max-width: 376px; } }
@@ -1707,8 +1716,6 @@ body {
         font-size: 16px;
         line-height: 24px;
         letter-spacing: -0.2px; }
-        .modal__container .form__input:last-child, .modal__container .form__textarea:last-child {
-          margin-bottom: 0; }
         .modal__container .form__input::-webkit-input-placeholder, .modal__container .form__textarea::-webkit-input-placeholder {
           font-size: 16px;
           line-height: 24px;
@@ -1729,29 +1736,15 @@ body {
           line-height: 24px;
           letter-spacing: -0.2px;
           color: #B5B6BC; }
+      .modal__container .form__textarea {
+        margin: 4px; }
   .modal__text {
     font-size: 14px;
     line-height: 16px;
-    margin: 0 16px 19px;
+    margin: 0;
     letter-spacing: 0.1px; }
-    @media screen and (min-width: 1440px) {
-      .modal__text {
-        margin: 0 32px 23px; } }
-    .modal__text--indent {
-      margin: 0 32px 15px; }
   .modal__text-conf {
     color: #ff3e79; }
-  .modal .btn-submit--width {
-    align-self: end;
-    margin-right: 16px;
-    font-size: 12px;
-    line-height: 24px;
-    letter-spacing: -0.15px;
-    text-align: center;
-    padding: 0; }
-    @media screen and (min-width: 1440px) {
-      .modal .btn-submit--width {
-        margin-right: 32px; } }
 
 .hidden {
   display: none; }

@@ -15,8 +15,8 @@
           <img class="logo" src="./img/Group.svg" alt="логотип компании CPS">
           <nav class="header__navigate">
             <div class="header__navigate-visibility">
-              <button class="link call"></button>
-              <button class="link chat"></button>
+              <button class="link call header__call"></button>
+              <button class="link chat header__chat"></button>
               <button class="link profile"></button>
             </div>
             <div class="header__line header__line--navigate--indent"></div>
@@ -189,41 +189,42 @@
       </footer>
       <div class="modal modal-feedback">
         <div class="modal__container">
-          <button class="link link--indent close"></button>
+          <button class="link link--indent close close__feedback"></button>
           <h2 class="main-title main-title--restyle">Обратная связь</h2>
           <form class="form" id="formFeedback" action="#" method="post">
             <input class="form__input" type="text" name="userName" required placeholder="Имя">
             <input class="form__input" type="tel" name="phone" required pattern="\+?[0-9\s\-\(\)]+" placeholder="Телефон">
             <input class="form__input" type="email" name="userEmail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Электронная почта">
             <textarea class="form__textarea" name="message" cols="30" rows="5" placeholder="Сообщение"></textarea>
-          </form>
-          <p class="modal__text">Нажимая “отправить”, вы даете согласие
+            <p class="modal__text">Нажимая “отправить”, вы даете согласие
             на
             <span class="modal__text-conf">обработку персональных данных</span>
             и соглашаетесь с нашей
             <span class="modal__text-conf">политикой конфиденциальности</span></p>
-          <input type="submit" form="formFeedback" class="btn-submit btn-submit-feedback btn-submit--width" value="ОТПРАВИТЬ">
+            <button type="submit" class="btn-submit btn-submit--form">ОТПРАВИТЬ</button>
+          </form>
         </div>
       </div>
       <div class="modal modal-call">
         <div class="modal__container">
-          <button class="link link--indent close"></button>
+          <button class="link link--indent close close__call"></button>
           <h2 class="main-title main-title--restyle">Заказать звонок</h2>
-          <form class="form form--indent" id="formCall" action="#" method="post">
+          <form class="form form--indent" action="#" method="post">
             <input class="form__input" type="tel" name="phone" required pattern="\+?[0-9\s\-\(\)]+" placeholder="Телефон">
-          </form>
-          <p class="modal__text modal__text--indent">Нажимая “отправить”, вы даете согласие
+            <p class="modal__text modal__text--indent">Нажимая “отправить”, вы даете согласие
             на
             <span class="modal__text-conf">обработку персональных данных</span>
             и соглашаетесь с нашей
             <span class="modal__text-conf">политикой конфиденциальности</span></p>
-          <input type="submit" form="formCall" class="btn-submit btn-submit--width" value="ОТПРАВИТЬ">
+            <button type="submit" class="btn-submit btn-submit--form">ОТПРАВИТЬ</button>
+          </form>
+
         </div>
       </div>
       <div class="overlay">
         <aside class="sidebar">
           <div class="sidebar__header">
-            <button class="header-button close header-button--indent--close"></button>
+            <button class="header-button close header-button--indent--close close__sidebar"></button>
             <img class="logo logo--indent" src="./img/Group.svg" alt="логотип компании CPS">
             <button class="header-button find header-button--indent--find"></button>
           </div>
@@ -256,10 +257,10 @@
           <div class="sidebar__communication">
             <ul class="sidebar__communication-list">
               <li class="sidebar__communication-item">
-                <button class="link call"></button>
+                <button class="link call sidebar__call"></button>
               </li>
               <li class="sidebar__communication-item">
-                <button class="link chat"></button>
+                <button class="link chat sidebar__chat"></button>
               </li>
               <li class="sidebar__communication-item">
                 <button class="link profile"></button>
