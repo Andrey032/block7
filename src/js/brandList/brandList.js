@@ -1,6 +1,6 @@
-const wrapper = document.querySelector('.wrapper');
-const brandList = wrapper.querySelector('.brand__list');
-const buttonBrands = wrapper.querySelector('.button-brand');
+const brand = document.querySelector('.brand');
+const brandList = brand.querySelector('.brand__list');
+const buttonBrands = brand.querySelector('.button-brand');
 
 //функция скрыть-показать элементы по кнопке(брэнды)
 function showBrands() {

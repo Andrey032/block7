@@ -1,6 +1,6 @@
-const wrapper = document.querySelector('.wrapper');
-const servicesList = wrapper.querySelector('.services__list');
-const buttonServices = wrapper.querySelector('.button-services');
+const services = document.querySelector('.services');
+const servicesList = services.querySelector('.services__list');
+const buttonServices = services.querySelector('.button-services');
 
 //функция скрыть-показать элементы по кнопке(услуги)
 function showServices() {

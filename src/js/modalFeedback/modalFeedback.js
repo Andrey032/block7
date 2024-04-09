@@ -1,8 +1,7 @@
-const wrapper = document.querySelector('.wrapper');
-const modalFeedback = wrapper.querySelector('.modal-feedback');
-const headerChat = wrapper.querySelector('.header__chat');
-const sidebarChat = wrapper.querySelector('.sidebar__chat');
-const closeFeedback = wrapper.querySelector('.close__feedback');
+const modalFeedback = document.querySelector('.modal-feedback');
+const headerChat = document.querySelector('.header__chat');
+const sidebarChat = document.querySelector('.sidebar__chat');
+const closeFeedback = modalFeedback.querySelector('.close__feedback');
 
 //функция показать окно обратная связь
 function openWindowChat() {

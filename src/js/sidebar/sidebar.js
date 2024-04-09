@@ -1,7 +1,6 @@
-const wrapper = document.querySelector('.wrapper');
-const overlay = wrapper.querySelector('.overlay');
-const burgerMenu = wrapper.querySelector('.burger');
-const closeSidebar = wrapper.querySelector('.close__sidebar');
+const overlay = document.querySelector('.overlay');
+const burgerMenu = document.querySelector('.burger');
+const closeSidebar = overlay.querySelector('.close__sidebar');
 
 //функция скрыть-показать бургер меню
 function toggleBtnMenu() {

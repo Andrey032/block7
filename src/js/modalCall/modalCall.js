@@ -1,8 +1,7 @@
-const wrapper = document.querySelector('.wrapper');
-const modalCall = wrapper.querySelector('.modal-call');
-const headerCall = wrapper.querySelector('.header__call');
-const sidebarCall = wrapper.querySelector('.sidebar__call');
-const closeCall = wrapper.querySelector('.close__call');
+const modalCall = document.querySelector('.modal-call');
+const headerCall = document.querySelector('.header__call');
+const sidebarCall = document.querySelector('.sidebar__call');
+const closeCall = modalCall.querySelector('.close__call');
 
 //функция показать окно обратный звонок
 function openWindowCall() {
